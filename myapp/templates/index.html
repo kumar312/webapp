@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% block content %}
+
+<form action="add" method="POST">
+    {% csrf_token %}
+
+    <label>ID:</label>
+    <div>{{form.eid}}</div>
+
+    <label>Name:</label>
+    <div>{{form.ename}}</div>
+
+    <label>Email:</label>
+    <div>{{form.eemail}}</div>
+
+    <label>Contact:</label>
+    <div>{{form.econtact}}</div>
+
+    <div style="padding-top: 10px;">
+        <button type="submit">ADD</button>
+    </div>
+</form>
+
+{% endblock %}
